@@ -36,13 +36,45 @@
         nav {
             display: flex;
             gap: 20px;
+            justify-content: center;
+            position: relative;
         }
         nav a {
             font-weight: bold;
             text-transform: uppercase;
+            position: relative;
+            padding: 10px;
         }
         nav a:hover {
             color: #E5107A;
+        }
+
+        /* Menu rozwijane */
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            z-index: 1000;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            color: #333;
+        }
+        .dropdown-content a:hover {
+            background-color: #f9f9f9;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
 
         /* Sekcja hero */
@@ -60,7 +92,7 @@
             font-size: 18px;
         }
 
-        /* Sekcja O nas */
+        /* Sekcja O mnie */
         #about {
             display: flex;
             gap: 40px;
@@ -75,7 +107,7 @@
             width: 50%;
         }
 
-        /* Sekcja Usługi */
+        /* Sekcja Oferta */
         #services {
             text-align: center;
             padding: 50px;
@@ -150,8 +182,21 @@
     <header>
         <img src="./Fuli.jpeg" alt="Logo FULI">
         <nav>
-            <a href="#about">O nas</a>
-            <a href="#services">Usługi</a>
+            <div class="dropdown">
+                <a href="#about">O mnie</a>
+                <div class="dropdown-content">
+                    <a href="#history">Moja historia</a>
+                    <a href="#mission">Moja misja</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#services">Oferta</a>
+                <div class="dropdown-content">
+                    <a href="#cosmetology">Kosmetologia</a>
+                    <a href="#trichology">Trychologia</a>
+                    <a href="#oncology">Pacjent Onkologiczny</a>
+                </div>
+            </div>
             <a href="#booking">Rezerwacja</a>
             <a href="#gallery">Galeria</a>
             <a href="#contact">Kontakt</a>
@@ -161,53 +206,6 @@
     <section class="hero">
         <h1>Salon Kosmetyczny FULI</h1>
         <p>Twoje piękno w najlepszych rękach</p>
-    </section>
-
-    <section id="about">
-        <img src="https://via.placeholder.com/600x400" alt="O nas">
-        <div>
-            <h2>O nas</h2>
-            <p>Salon kosmetyczny FULI to miejsce, w którym piękno spotyka się z profesjonalizmem. Nasz zespół doświadczonych kosmetologów dba o Twoją skórę i dobre samopoczucie.</p>
-        </div>
-    </section>
-
-    <section id="services">
-        <h2>Nasze usługi</h2>
-        <div class="services-container">
-            <div class="service-card">
-                <h3>Zabieg oczyszczania twarzy</h3>
-                <p>Cena: 200 zł</p>
-            </div>
-            <div class="service-card">
-                <h3>Manicure hybrydowy</h3>
-                <p>Cena: 120 zł</p>
-            </div>
-            <div class="service-card">
-                <h3>Pedicure SPA</h3>
-                <p>Cena: 150 zł</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="booking">
-        <h2>Rezerwacja online</h2>
-        <p>Rezerwacje możliwe są za pośrednictwem platformy <strong>Booksy</strong>.</p>
-    </section>
-
-    <section id="gallery">
-        <h2>Galeria</h2>
-        <div class="gallery-container">
-            <img src="https://via.placeholder.com/300x200" alt="Galeria 1">
-            <img src="https://via.placeholder.com/300x200" alt="Galeria 2">
-            <img src="https://via.placeholder.com/300x200" alt="Galeria 3">
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <p>ul. Piękna 12, 00-001 Warszawa</p>
-        <p>+48 123 456 789</p>
-        <p>kontakt@fuli-salon.pl</p>
     </section>
 
     <footer>
