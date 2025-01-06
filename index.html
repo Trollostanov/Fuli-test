@@ -24,20 +24,36 @@
         header {
             background: #fff;
             color: #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 50px;
+            text-align: center;
+            padding: 20px 0;
             border-bottom: 1px solid #ddd;
+            position: relative;
         }
         header img {
-            height: 60px;
+            height: 80px;
         }
+        .social-icons {
+            position: absolute;
+            top: 20px;
+            right: 50px;
+        }
+        .social-icons a {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        .social-icons a:hover {
+            color: #E5107A;
+        }
+
+        /* Pasek nawigacji */
         nav {
+            background: #f9f9f9;
             display: flex;
-            gap: 20px;
             justify-content: center;
-            position: relative;
+            gap: 40px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
         }
         nav a {
             font-weight: bold;
@@ -181,32 +197,31 @@
 <body>
     <header>
         <img src="./Fuli.jpeg" alt="Logo FULI">
-        <nav>
-            <div class="dropdown">
-                <a href="#about">O mnie</a>
-                <div class="dropdown-content">
-                    <a href="#history">Moja historia</a>
-                    <a href="#mission">Moja misja</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a href="#services">Oferta</a>
-                <div class="dropdown-content">
-                    <a href="#cosmetology">Kosmetologia</a>
-                    <a href="#trichology">Trychologia</a>
-                    <a href="#oncology">Pacjent Onkologiczny</a>
-                </div>
-            </div>
-            <a href="#booking">Rezerwacja</a>
-            <a href="#gallery">Galeria</a>
-            <a href="#contact">Kontakt</a>
-        </nav>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/fuli_warszawa?igsh=MXVxYjJzZndwajg3aQ==" target="_blank">&#x1F4F7;</a>
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>Salon Kosmetyczny FULI</h1>
-        <p>Twoje piękno w najlepszych rękach</p>
-    </section>
+    <nav>
+        <div class="dropdown">
+            <a href="#about">O mnie</a>
+            <div class="dropdown-content">
+                <a href="#history">Moja historia</a>
+                <a href="#mission">Moja misja</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#services">Oferta</a>
+            <div class="dropdown-content">
+                <a href="#cosmetology">Kosmetologia</a>
+                <a href="#trichology">Trychologia</a>
+                <a href="#oncology">Pacjent Onkologiczny</a>
+            </div>
+        </div>
+        <a href="#booking">Rezerwacja</a>
+        <a href="#gallery">Galeria</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
 
     <footer>
         &copy; 2024 Salon Kosmetyczny FULI. Wszystkie prawa zastrzeżone.
