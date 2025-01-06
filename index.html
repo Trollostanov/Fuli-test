@@ -36,13 +36,18 @@
             position: absolute;
             top: 20px;
             right: 50px;
+            display: flex;
+            gap: 10px;
         }
         .social-icons a {
-            font-size: 24px;
-            margin-left: 10px;
+            display: inline-block;
         }
-        .social-icons a:hover {
-            color: #E5107A;
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+        .social-icons a:hover img {
+            opacity: 0.8;
         }
 
         /* Pasek nawigacji */
@@ -198,7 +203,12 @@
     <header>
         <img src="./Fuli.jpeg" alt="Logo FULI">
         <div class="social-icons">
-            <a href="https://www.instagram.com/fuli_warszawa?igsh=MXVxYjJzZndwajg3aQ==" target="_blank">&#x1F4F7;</a>
+            <a href="https://www.instagram.com/fuli_warszawa?igsh=MXVxYjJzZndwajg3aQ==" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/share/1DWGAvSQoj/?mibextid=wwXIfr" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt="Facebook">
+            </a>
         </div>
     </header>
 
