@@ -112,47 +112,43 @@
             color: #E5107A;
         }
 
-        /* Pasek - efekt zanikania */
-        nav::after {
-            height: 4px;
-            background: linear-gradient(to right, rgba(204, 204, 204, 0), rgba(204, 204, 204, 0.7), rgba(204, 204, 204, 0));
+        /* Sekcja recenzji */
+        .reviews {
+            background: #f9f9f9;
+            padding: 50px 20px;
+            text-align: center;
         }
-        nav::before {
-            height: 4px;
-            background: linear-gradient(to right, rgba(204, 204, 204, 0), rgba(204, 204, 204, 0.7), rgba(204, 204, 204, 0));
+        .reviews h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
         }
-
-        /* Efekt muśnięcia pędzlem */
-        nav {
-            box-shadow: inset 0 10px 15px -10px rgba(204, 204, 204, 0.5), inset 0 -10px 15px -10px rgba(204, 204, 204, 0.5);
-        }
-
-        /* Menu rozwijane */
-        .dropdown {
-            position: relative;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #fff;
+        .review {
+            background: #fff;
             border: 1px solid #ddd;
-            z-index: 1000;
-            min-width: 200px;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 600px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .dropdown-content a {
-            display: block;
-            padding: 10px;
+        .review p {
+            font-size: 14px;
+            font-style: italic;
+            margin: 0 0 10px;
+        }
+        .review span {
+            font-size: 12px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        /* Stopka */
+        footer {
+            background: #333;
+            color: white;
             text-align: center;
-            color: #333;
-        }
-        .dropdown-content a:hover {
-            background-color: #f9f9f9;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
+            padding: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -185,6 +181,22 @@
         <a href="#gallery">Galeria</a>
         <a href="#contact">Kontakt</a>
     </nav>
+
+    <section class="reviews">
+        <h2>Opinie naszych klientów</h2>
+        <div class="review">
+            <p>"Profesjonalna obsługa i fantastyczne efekty zabiegów! Polecam każdemu."</p>
+            <span>- Anna K.</span>
+        </div>
+        <div class="review">
+            <p>"Cudowne miejsce pełne relaksu i profesjonalizmu. Na pewno wrócę!"</p>
+            <span>- Marek P.</span>
+        </div>
+        <div class="review">
+            <p>"Najlepszy salon kosmetyczny w Warszawie. Pełen profesjonalizm."</p>
+            <span>- Katarzyna L.</span>
+        </div>
+    </section>
 
     <footer>
         &copy; 2024 Salon Kosmetyczny FULI. Wszystkie prawa zastrzeżone.
